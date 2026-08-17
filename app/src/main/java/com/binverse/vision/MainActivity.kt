@@ -95,9 +95,10 @@ class MainActivity : AppCompatActivity() {
         val imagesDir = File(cacheDir, "images")
         if (!imagesDir.exists()) imagesDir.mkdirs()
         val file = File(imagesDir, "capture_${System.currentTimeMillis()}.jpg")
+        val uri = FileProvider.getUriForFile(this, "$packageName.fileprovider", file)
         photoFile = file
-        photoUri = FileProvider.getUriForFile(this, "$packageName.fileprovider", file)
-        takePictureLauncher.launch(photoUri)
+        photoUri = uri
+        takePictureLauncher.launch(uri)
     }
 
     private fun showPreview(file: File) {
