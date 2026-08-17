@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BinVerse Vision</string>
+    <string name="capture_button">Tap to Capture &amp; Classify</string>
+    <string name="send_to_robot_button">Send to Robot</string>
+    <string name="settings_button">Settings</string>
+    <string name="preview_description">Captured image preview</string>
+    <string name="default_backend_url">https://binveisionbackend.onrender.com</string>
+</resources>
